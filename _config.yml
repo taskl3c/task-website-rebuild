@@ -1,51 +1,24 @@
-baseurl: '/'
-permalink: pretty
-title: 'Jekyll Serif'
+yaml
+title: "TASK L3C"
+email: "carl@tokyotaskforce.com"
+description: "Building disaster readiness in Japan before the next disaster"
+baseurl: "/task-website-rebuild"
+url: "https://taskl3c.github.io"
+github_username: taskl3c
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+# Serif theme settings
+header_pages:
+  - index.md
+  - vision.md
+  - programs.md
+  - transparency.md
+  - contact.md
 
-home: 
-  limit_services: 6
-
-collections:
-  services:
-    output: true
-    sort_by: weight
-  team:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
-
-sass:
-  style: compressed # possible values: nested expanded compact compressed
-
+# Build settings
+theme: jekyll-serif-theme
 plugins:
-  - jekyll-environment-variables
+  - jekyll-feed
+  - jekyll-seo-tag
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - LICENSE.md
-  - LICENSE
-  - README.md
+# Custom variables
+mission_statement: "Japan shouldn't face the next disaster unprepared"
